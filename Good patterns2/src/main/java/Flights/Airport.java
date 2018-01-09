@@ -1,32 +1,43 @@
 package Flights;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Airport {
 
     private String city;
+    private List<Airport> destinations;
 
-    private airport(String city) {
+    public Airport(String city, List<Airport> destinations) {
         this.city = city;
+        this.destinations = destinations;
+    }
+
+    @Override
+    public String toString() {
+        return "Airport" + " " + "city = " + city;
+
+    }
+
+    public Airport(String city) {
+        this.city = city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public List<Airport> getDestinations() {
+        return destinations;
+    }
+
+    public void setDestinations(List<Airport> destinations) {
+        this.destinations = destinations;
     }
 
     public String getCity() {
         return city;
     }
 
-    private String KRK;
-    private String WRO;
-    private String WAW;
-
-
-    private List<Airport> destinationList() {
-        List<Airport> allDestinations = new ArrayList<>();
-
-        allDestinations.add(KRK);
-        allDestinations.add(WRO);
-        allDestinations.add(WAW);
-
-        return allDestinations;
     }
-}
+
+
