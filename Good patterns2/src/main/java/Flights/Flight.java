@@ -2,7 +2,6 @@ package Flights;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Flight {
 
@@ -10,7 +9,7 @@ public class Flight {
 
     public Set<Flight> flightsSet = new HashSet<>();
 
-    private String getAirport(){
+    String getAirport(){
         return airport;
     }
 
