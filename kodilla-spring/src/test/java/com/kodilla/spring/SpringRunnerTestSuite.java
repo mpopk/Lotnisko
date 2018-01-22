@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -53,10 +54,11 @@ public class SpringRunnerTestSuite {
         //Given
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Shape shape = (Shape)context.getBean("choosenShape");
+        Shape shape = (Shape)context.getBean("chosenShape");
         //When
         String name = shape.getShapeName();
         //Then
-        System.out.println("Choosen shape says: " + name);
+        System.out.println("Chosen shape says: " + name);
     }
+
 }
